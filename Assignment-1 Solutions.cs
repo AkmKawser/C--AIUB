@@ -1,6 +1,33 @@
 PROGRAM-1:
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace LabTask3
+{
+     class Employee
+    {
+        public int empNo;
+        public string name;
+        public DateTime date_of_hire;
+        public string job_desc;
+        public string dept;
+        public int sal;
+        public int age;
+
+        public void toString()
+        {
+            Console.WriteLine("Employee No. " + empNo);
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Job Description: {0},\nDepartment: {1},\nSalary: {2}", job_desc, dept, sal);
+
+        }
+
+    }
+}
 
 
 PROGRAM-2:
