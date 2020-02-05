@@ -1,6 +1,41 @@
 /*PROGRAM-1:*/
 
+using System;
 
+
+namespace LabTask1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the ph level number of the aquarium");
+            int ph = Convert.ToInt32(Console.ReadLine());
+
+            if (ph == 7)
+            {
+                Console.WriteLine("The water is neutral");
+            }
+
+            else if (ph > 7)
+            {
+                Console.WriteLine("The water is alkaline");
+            }
+
+            else if (ph < 7)
+            {
+                Console.WriteLine("The water is acidic");
+            }
+
+            else
+            {
+                Console.WriteLine("Invalid input");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
 
 
 /*PROGRAM-2:*/
