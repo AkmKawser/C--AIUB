@@ -200,52 +200,48 @@ using System.Threading.Tasks;
 
 namespace LabTask3
 {
-     class Employee
+    class Employee
     {
         public int empNo;
-        public string name;
-        public DateTime date_of_hire;
-        public string job_desc;
-        public string dept;
-        public int sal;
-        public int age;
+        public string name { get; set; }
+        public int yearOfHire;
+       // public int currentYear = 2020;
+        public string jobDesc { get; set; }
+        public string dept { get; set; }
+        private decimal sal;
+        //public int age { get; set; }
+
+        public Employee(int sn_no, string nm, int date_of_hire, string job_desc, string department, decimal salary)
+        {
+            empNo = sn_no;
+            name = nm;
+            yearOfHire = date_of_hire;
+            jobDesc = job_desc;
+            dept = department;
+            Salary = salary;
+            
+            
+        }
+
+        public decimal Salary
+        {
+            get{return sal; }
+            set
+            {
+                if(value >= 0)
+                {
+                    sal = value;
+                }
+            }
+        }
 
         public void toString()
         {
             Console.WriteLine("Employee No. " + empNo);
             Console.WriteLine("Name: " + name);
-            Console.WriteLine("Job Description: {0},\nDepartment: {1},\nSalary: {2}", job_desc, dept, sal);
+            Console.WriteLine("Job Description: {0}\nDepartment: {1}\nSalary: {2}" ,jobDesc, dept, sal);
 
         }
 
     }
-}
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LabTask3
-
-{ 
-    class Test
-    {
-        private static DateTime date_of_hire;
-
-        static void Main(string[] args)
-        {
-            var today = DateTime.Today;
-
-             Employee e1 = new Employee();
-            e1.empNo = 1;
-            e1.name = "Rabbi Akm Kawser";
-            e1.dept = "Computer Science and Engineering";
-            e1.job_desc = "Project Manager";
-            e1.sal = 200000;
-            e1.toString();
-
-    }
-   }
 }
