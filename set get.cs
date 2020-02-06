@@ -70,7 +70,7 @@ namespace ConsoleApplication1
                System.Console.WriteLine("Student Name is: " +name);
                System.Console.WriteLine("Student Age is: " + age);
                System.Console.WriteLine("Student DOB is: " + dob);
-               System.Console.WriteLine("Student Address isress);
+               System.Console.WriteLine("Student Address is: "+ address);
                
          }
 
