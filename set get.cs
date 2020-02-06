@@ -1,3 +1,4 @@
+/* To use private members in different class we use set get methods*/
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace ConsoleApplication1
          private int age;
          private String dob;
          private String address;
-         private String phone;
+         
 
 
          public void SetName(String name)
@@ -20,35 +21,38 @@ namespace ConsoleApplication1
 
              this.name = name;
          }
-
          public String GetAge()
          {
              return this.name;
 
          }
 
+          
+          
          public void SetAge(int age)
          {
              this.age = age;
          }
-
          public int GetAge()
          {
              return this.age;
          }
+          
+          
 
          public void SetDob(String dob)
          {
              this.dob = dob;
 
          }
-
          public String GetDob()
          {
              return this.dob;
 
          }
-
+          
+          
+          
          public void SetAddress(String address)
          {
              this.address = address;
@@ -58,6 +62,7 @@ namespace ConsoleApplication1
          {
              return this.address;
          }
+          
 
 
          public void ShowDetails()
@@ -78,8 +83,12 @@ namespace ConsoleApplication1
              p.SetAge(27);
              p.SetDob("29th april");
              p.SetAddress("Mirpur Dhaka");
+             
+             p.GetName();
+             p.GetAge();
+             p.GetDob();
+             p.GetAddress();
              p.ShowDetails();
-           
 
          }
 
