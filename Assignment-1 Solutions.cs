@@ -205,7 +205,6 @@ namespace LabTask3
         public int empNo;
         public string name { get; set; }
         public int yearOfHire;
-       // public int currentYear = 2020;
         public string jobDesc { get; set; }
         public string dept { get; set; }
         private decimal sal;
