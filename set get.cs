@@ -68,10 +68,10 @@ namespace ConsoleApplication1
          public void ShowDetails()
          {
                System.Console.WriteLine("Student Name is: " +name);
-               System.Console.WriteLine("Student Name is: " + age);
-               System.Console.WriteLine("Student Name is: " + dob);
-               System.Console.WriteLine("Student Name is: " + address);
-               System.Console.WriteLine("Student Name is: " + phone);
+               System.Console.WriteLine("Student Age is: " + age);
+               System.Console.WriteLine("Student DOB is: " + dob);
+               System.Console.WriteLine("Student Address isress);
+               
          }
 
 
