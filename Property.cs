@@ -1,0 +1,1 @@
+/* Instead of using MANUAL set get methods we can use property that gives built in SET GET METHOD FEATURES */
