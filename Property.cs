@@ -1,5 +1,7 @@
 //Instead of using MANUAL set get methods we can use property that gives built in SET GET METHOD FEATURES 
 
+//Snap of solution explorer - https://ibb.co/HDvXLWM
+
 
 /*1st assembly name -ConsoleApplication [Always এই নাম দিব কারন এইটা mainly এটা Console Application file] - এটা Startup Porject*/
 //This assembly contains - Program.cs file 
