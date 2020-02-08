@@ -193,6 +193,7 @@ namespace AssignmentCSharp
 /*Programg-3:*/
 
 //Assembly-1: Program.cs
+
 using ClassLibrary;
 namespace ConsoleApplication
 {
@@ -201,21 +202,13 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
 
-            Employee e = new Employee();
-
-            e.empNo = 1;
-            e.name = "Kawser";
-            e.dateOfbirth = "29/04/1994";
-            e.dateOfHire = "1/1/2020";
-            e.jobDesc = "Bla Bla";
-            e.dept = "Software Enginner";
-            e.Address = "Mirpur Dhaka";
-            e.Mosal = 50000;
+            Employee e = new Employee(1,"Kawser","1/1/2020", "Bla Bla", "Software Enginner");
+            e.MoSal = 50000;
+            e.Age(Convert.ToDateTime(29/04/1994"));
             e.ToString();
         }
     }
 }
-
 
 
 //Assembly-2: Employee.cs
@@ -235,11 +228,10 @@ namespace ClassLibrary
 
 
         /*Parametarized Constructor */
-        public Employee(int empNo, String name, DateTime dateOfbirth, String dateOfhire, String jobDesc, String dept)
+        public Employee(int empNo, String name, String dateOfhire, String jobDesc, String dept)
         {
             this.empNo = empNo;
             this.name = name;
-            this.dateOfbirth = dateOfbirth;
             this.dateOfhire = dateOfhire;
             this.jobDesc = jobDesc;
             this.dept = dept;
@@ -250,27 +242,26 @@ namespace ClassLibrary
             set { this.moSal = value; }
             get { return this.moSal; }
         }
-        
+
         /*Member Method*/
         public int Age(DateTime dateOfbirth)
         {
-            
-          //dateOfbirth =Convert.ToDateTime();
+           
             DateTime today = DateTime.Today;
             int age = today.Year - dateOfbirth.Year;
             if (dateOfbirth > today.AddYears(-age))
                 age--;
-            return age;          
+            return age;
         }
         public void ToString()
         {
             Console.WriteLine("Employee No:" + empNo);
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Date Of Birth: " + dateOfbirth);
-            Console.WriteLine("Date Of Hire: "+dateOfhire);
-            Console.WriteLine("Job Description: {0}\nDepartment: {1}\nSalary: {2}", jobDesc, dept, moSal);
+            Console.WriteLine("Date Of Hire: " + dateOfhire);
+            Console.WriteLine("Job Description: {0}\nDepartment: {1}\n", jobDesc, dept);
             Console.WriteLine("Age: " + age);
         }
-        
+
     }
 }
