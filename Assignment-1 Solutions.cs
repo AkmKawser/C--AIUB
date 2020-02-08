@@ -41,6 +41,7 @@ namespace ConsoleApplication
 //Assembly-1: Program.cs
 
 using System;
+using ClassLibrary;
 namespace ConsoleApplication
 {
     class Program
@@ -175,12 +176,7 @@ namespace ClassLibrary
             }
 
             return days;
-
-
         }
-
-
-
     }
 }
 
