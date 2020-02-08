@@ -192,50 +192,85 @@ namespace AssignmentCSharp
 
 /*Programg-3:*/
 
-using System;
-namespace LabTask3
+//Assembly-1: Program.cs
+using ClassLibrary;
+namespace ConsoleApplication
 {
-    class Employee
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Employee e = new Employee();
+
+            e.empNo = 1;
+            e.name = "Kawser";
+            e.dateOfbirth = "29/04/1994";
+            e.dateOfHire = "1/1/2020";
+            e.jobDesc = "Bla Bla";
+            e.dept = "Software Enginner";
+            e.Address = "Mirpur Dhaka";
+            e.Mosal = 50000;
+            e.ToString();
+        }
+    }
+}
+
+
+
+//Assembly-2: Employee.cs
+using System;
+namespace ClassLibrary
+{
+    public class Employee
     {
         public int empNo;
-        public string name { get; set; }
-        public int yearOfHire;
-        public string jobDesc { get; set; }
-        public string dept { get; set; }
-        private decimal sal;
-        //public int age { get; set; }
+        public String name;
+        public DateTime dateOfbirth;
+        public String dateOfhire;
+        public String jobDesc;
+        public String dept;
+        private int moSal;
+        public int age;
 
-        public Employee(int sn_no, string nm, int date_of_hire, string job_desc, string department, decimal salary)
+
+        /*Parametarized Constructor */
+        public Employee(int empNo, String name, DateTime dateOfbirth, String dateOfhire, String jobDesc, String dept)
         {
-            empNo = sn_no;
-            name = nm;
-            yearOfHire = date_of_hire;
-            jobDesc = job_desc;
-            dept = department;
-            Salary = salary;
-            
-            
+            this.empNo = empNo;
+            this.name = name;
+            this.dateOfbirth = dateOfbirth;
+            this.dateOfhire = dateOfhire;
+            this.jobDesc = jobDesc;
+            this.dept = dept;
         }
 
-        public decimal Salary
+        public int MoSal
         {
-            get{return sal; }
-            set
-            {
-                if(value >= 0)
-                {
-                    sal = value;
-                }
-            }
+            set { this.moSal = value; }
+            get { return this.moSal; }
         }
-
-        public void toString()
+        
+        /*Member Method*/
+        public int Age(DateTime dateOfbirth)
         {
-            Console.WriteLine("Employee No. " + empNo);
+            
+          //dateOfbirth =Convert.ToDateTime();
+            DateTime today = DateTime.Today;
+            int age = today.Year - dateOfbirth.Year;
+            if (dateOfbirth > today.AddYears(-age))
+                age--;
+            return age;          
+        }
+        public void ToString()
+        {
+            Console.WriteLine("Employee No:" + empNo);
             Console.WriteLine("Name: " + name);
-            Console.WriteLine("Job Description: {0}\nDepartment: {1}\nSalary: {2}" ,jobDesc, dept, sal);
-
+            Console.WriteLine("Date Of Birth: " + dateOfbirth);
+            Console.WriteLine("Date Of Hire: "+dateOfhire);
+            Console.WriteLine("Job Description: {0}\nDepartment: {1}\nSalary: {2}", jobDesc, dept, moSal);
+            Console.WriteLine("Age: " + age);
         }
-
+        
     }
 }
