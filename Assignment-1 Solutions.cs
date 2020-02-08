@@ -7,30 +7,30 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the ph level number of the aquarium");
+            Console.WriteLine("Enter the ph level number of the Aquarium");
             int ph = Convert.ToInt32(Console.ReadLine());
 
             if (ph == 7)
             {
-                Console.WriteLine("The water is neutral");
+                Console.WriteLine("The water is Neutral");
             }
 
             else if (ph > 7)
             {
-                Console.WriteLine("The water is alkaline");
+                Console.WriteLine("The water is Alkaline");
             }
 
             else if (ph < 7)
             {
-                Console.WriteLine("The water is acidic");
+                Console.WriteLine("The water is Acidic");
             }
 
             else
             {
-                Console.WriteLine("Invalid input");
+                Console.WriteLine("Invalid Input");
             }
 
-            Console.ReadKey();
+          
         }
     }
 }
