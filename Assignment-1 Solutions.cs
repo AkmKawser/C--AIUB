@@ -244,7 +244,7 @@ namespace ClassLibrary
             this.jobDesc = jobDesc;
             this.dept = dept;
         }
-
+        /*Property */
         public int MoSal
         {
             set { this.moSal = value; }
