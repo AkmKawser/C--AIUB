@@ -195,6 +195,8 @@ namespace AssignmentCSharp
 //Assembly-1: Program.cs
 
 using ClassLibrary;
+using System;
+
 namespace ConsoleApplication
 {
     class Program
@@ -204,7 +206,7 @@ namespace ConsoleApplication
 
             Employee e = new Employee(1,"Kawser","1/1/2020", "Bla Bla", "Software Enginner");
             e.MoSal = 50000;
-            e.Age(Convert.ToDateTime(29/04/1994"));
+            e.Age(Convert.ToDateTime("29/04/1880"));
             e.ToString();
         }
     }
@@ -259,7 +261,7 @@ namespace ClassLibrary
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Date Of Birth: " + dateOfbirth);
             Console.WriteLine("Date Of Hire: " + dateOfhire);
-            Console.WriteLine("Job Description: {0}\nDepartment: {1}\n", jobDesc, dept);
+            Console.WriteLine("Job Description: {0}\nDepartment: {1}", jobDesc, dept);
             Console.WriteLine("Age: " + age);
         }
 
