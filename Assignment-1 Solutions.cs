@@ -38,6 +38,9 @@ namespace ConsoleApplication
 
 /*PROGRAM-2:*/
 
+//Question টা বুঝতে problem হচ্ছে। ToString() method ও No of days and month name return করবে আবার memebr function ও same জিনিস return করবে 
+//মানে কি হল এটা !! 
+
 //Assembly-1: Program.cs
 
 using System;
