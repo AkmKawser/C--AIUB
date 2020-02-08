@@ -1,9 +1,7 @@
 /*PROGRAM-1:*/
 
 using System;
-
-
-namespace LabTask1
+namespace ConsoleApplication
 {
     class Program
     {
