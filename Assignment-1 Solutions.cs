@@ -40,10 +40,9 @@ namespace LabTask1
 
 /*PROGRAM-2:*/
 
-Program.cs
+//Assembly-1: Program.cs
 
 using System;
-
 namespace PracticeCSharp
 {
     class Program
@@ -66,12 +65,9 @@ namespace PracticeCSharp
 
 
 
-AssignmentCShaprp.cs
+//Assembly-2: Month.cs
 
 using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace AssignmentCSharp
 {
     class Month
