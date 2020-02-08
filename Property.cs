@@ -6,7 +6,7 @@
 /*1st assembly name -ConsoleApplication [Always এই নাম দিব কারন এইটা mainly এটা Console Application file] - এটা Startup Porject*/
 //This assembly contains - Program.cs file 
 using ClassLibrary;  // adding namespace name [Is this called the reference?]
-namespace Kawser
+namespace ConsoleApplication
 {
     class Program
     {
