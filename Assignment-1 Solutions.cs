@@ -244,7 +244,7 @@ namespace ClassLibrary
             this.jobDesc = jobDesc;
             this.dept = dept;
         }
-        /*Property */
+        /*Property for accessing private attributes */
         public int MoSal
         {
             set { this.moSal = value; }
