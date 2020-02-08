@@ -5,7 +5,7 @@
 
 /*1st assembly name -ConsoleApplication [Always এই নাম দিব কারন এইটা mainly এটা Console Application file] - এটা Startup Porject*/
 //This assembly contains - Program.cs file 
-using Mynamespace;  // adding namespace name [Is this called the reference?]
+using ClassLibrary;  // adding namespace name [Is this called the reference?]
 namespace Kawser
 {
     class Program
@@ -31,7 +31,7 @@ namespace Kawser
 //This assembly contains - Person.cs file
 using System;
 
-namespace Mynamespace
+namespace ClassLibrary
 {
     
         public class Person
