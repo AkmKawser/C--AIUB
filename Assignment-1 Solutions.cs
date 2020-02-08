@@ -43,7 +43,7 @@ namespace LabTask1
 //Assembly-1: Program.cs
 
 using System;
-namespace PracticeCSharp
+namespace ConsoleApplication
 {
     class Program
     {
@@ -68,7 +68,7 @@ namespace PracticeCSharp
 //Assembly-2: Month.cs
 
 using System;
-namespace AssignmentCSharp
+namespace ClassLibrary
 {
     class Month
     {
