@@ -255,7 +255,7 @@ namespace ClassLibrary
             Console.WriteLine("Date Of Birth: " + dateOfbirth);
             Console.WriteLine("Date Of Hire: " + dateOfhire);
             Console.WriteLine("Job Description: {0}\nDepartment: {1}", jobDesc, dept);
-            Console.WriteLine("Age: " + age);
+            Console.WriteLine("Age: " + Age(dateOfbirth));
         }
 
     }
