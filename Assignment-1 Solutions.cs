@@ -8,7 +8,7 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
             Console.WriteLine("Enter the ph level number of the Aquarium");
-            double ph = Convert.ToInt32(Console.ReadLine());
+            double ph = Convert.ToDouble(Console.ReadLine());
 
             if (ph == 7)
             {
