@@ -51,65 +51,81 @@ namespace MyLibrary
 
 
 Account.cs
+
 using System;
-namespace MyLibrary
+namespace MyLibrary2
 {
-    private struct Date{
-        private int day;
-        private int month;
-        private int year;
 
-        public Date(int day,int month,int year){
-            this.day=day;
-            this.month=month;
-            this.year=year;
-
-        }
-        public int Day{
-            set{
-                this.day=value;
-            }
-            get{
-                return this.day;
-            }
-        }
-        public int Month{
-            set{
-                this.month=value;
-            }
-            get{
-                return this.month;
-            }
-        }
-        public int Year{
-            set{
-                this.year=value;
-            }
-            get{
-                return this.year;
-            }
-        }
-
-    }
-    
-        
-    }
     public class Account
     {
+        private struct Date
+        {
+            private int day;
+            private int month;
+            private int year;
+
+            public Date(int day, int month, int year)
+            {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+
+            }
+            public int Day
+            {
+                set
+                {
+                    this.day = value;
+                }
+                get
+                {
+                    return this.day;
+                }
+            }
+            public int Month
+            {
+                set
+                {
+                    this.month = value;
+                }
+                get
+                {
+                    return this.month;
+                }
+            }
+            public int Year
+            {
+                set
+                {
+                    this.year = value;
+                }
+                get
+                {
+                    return this.year;
+                }
+            }
+
+        }
+
+
+
+
+
         private string accNo;
         private string accName;
         private double balance;
-       
+
         private static int c = 1;
         //Parameterless Constructor
-        public Account(string accName,double balance,Date dob){
-            this.accName=null;
-            this.balance=0.0d;
-            
+        public Account(string accName, double balance, Date dob)
+        {
+            this.accName = null;
+            this.balance = 0.0d;
+
         }
 
-     //Parameterized Constructor
-        public Account(string accName,double balance,Date dob)
+        //Parameterized Constructor
+        public Account(string accName, double balance, Date dob)
         {
             this.accNo = "Acc-" + c;
             c++;
@@ -120,7 +136,7 @@ namespace MyLibrary
 
 
 
-//Property
+        //Property
         public string AccNo
         {
             get { return this.accNo; }
@@ -154,7 +170,7 @@ namespace MyLibrary
         //Withdraw
         public bool Withdraw(double amount)
         {
-            if (amount > 0 && amount<=this.balance)
+            if (amount > 0 && amount <= this.balance)
             {
                 this.balance -= amount;
                 return true;
@@ -173,7 +189,7 @@ namespace MyLibrary
             return false;
         }
 
-//Calculate Age
+        //Calculate Age
         public int CalculateAge()
         {
             int age = DateTime.Now.Year - this.dob.Year;
@@ -181,10 +197,10 @@ namespace MyLibrary
         }
 
 
-//Show Details
+        //Show Details
         public void ShowDetails()
         {
-            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}\nDate of Birth:{3}\nAge:{4}",this.accNo,this.accName,this.balance,this.dob.GetDate(),this.CalculateAge());
+            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}\nDate of Birth:{3}\nAge:{4}", this.accNo, this.accName, this.balance, this.dob.GetDate(), this.CalculateAge());
         }
     }
-
+}
