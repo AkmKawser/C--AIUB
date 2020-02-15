@@ -51,8 +51,6 @@ namespace MyLibrary
 
 
 Account.cs
-
-
 using System;
 namespace MyLibrary2
 {
@@ -118,14 +116,7 @@ namespace MyLibrary2
         private Date dob;
 
         private static int c = 1;
-        //Parameterless Constructor
-        
-        public Account(string accName, double balance, Date dob)
-        {
-            this.accName = null;
-            this.balance = 0.0d;
-
-        }
+     
 
         //Parameterized Constructor
         public Account(string accName, double balance, Date dob)
