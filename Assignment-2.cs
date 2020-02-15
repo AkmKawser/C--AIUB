@@ -52,6 +52,7 @@ namespace MyLibrary
 
 Account.cs
 
+
 using System;
 namespace MyLibrary2
 {
@@ -114,9 +115,11 @@ namespace MyLibrary2
         private string accNo;
         private string accName;
         private double balance;
+        private Date dob;
 
         private static int c = 1;
         //Parameterless Constructor
+        
         public Account(string accName, double balance, Date dob)
         {
             this.accName = null;
@@ -200,7 +203,8 @@ namespace MyLibrary2
         //Show Details
         public void ShowDetails()
         {
-            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}\nDate of Birth:{3}\nAge:{4}", this.accNo, this.accName, this.balance, this.dob.GetDate(), this.CalculateAge());
+            Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}\nDate of Birth:{3}\nAge:{4}", this.accNo, this.accName, this.balance, this.CalculateAge());
         }
     }
 }
+
