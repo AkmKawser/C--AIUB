@@ -9,13 +9,17 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-			Bank b1 = new Bank(2);
-			Account a1 = new Account("Kawser",20000.0,'29-04-1994');
+			Bank b1 = new Bank(4);
+			Account a1 = new Account("Kawser",20000.0,29-04-1994);
 			a1.AccName("OOP2 G");
 			//a1.AccNo("11111111");
 			a1.Balance(2000.0);
+            a1.Deposit(20.00);
+            a1.Withdraw(10.00);
+            a1.CalculateAge();
+            
 
-			Account a2 = new Account("Asif",10000.0,'12-05-1990');
+			Account a2 = new Account("Asif",10000.0,12-05-1990);
 			a2.AccName("OOP2 C");
 			//a2.AccNo("11111112");
 			a2.Balance(2500.0);
@@ -23,7 +27,7 @@ namespace ConsoleApp2
 
 			b1.AddAccount(a1);
 			b1.AddAccount(a2);
-
+          
 
 			b1.ShowAccounts();
 
@@ -36,7 +40,6 @@ namespace ConsoleApp2
         }
     }
 }
-
 
 Bank.cs
 using System;
