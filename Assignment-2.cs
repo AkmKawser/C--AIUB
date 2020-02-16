@@ -1,11 +1,52 @@
 
+Program.cs 
+using MyLibrary2;
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+			Bank b1 = new Bank(2);
+			Account a1 = new Account("Kawser",20000.0,'29-04-1994');
+			a1.AccName("OOP2 G");
+			//a1.AccNo("11111111");
+			a1.Balance(2000.0);
+
+			Account a2 = new Account("Asif",10000.0,'12-05-1990');
+			a2.AccName("OOP2 C");
+			//a2.AccNo("11111112");
+			a2.Balance(2500.0);
+
+
+			b1.AddAccount(a1);
+			b1.AddAccount(a2);
+
+
+			b1.ShowAccounts();
+
+			b1.DeleteAccount(a1);  //auto generated account pass korbo kibhabe
+
+			b1.ShowAccounts();
+
+			b1.DeleteAccount(a2);
+
+        }
+    }
+}
+
+
 Bank.cs
 using System;
-namespace MyLibrary
+namespace MyLibrary2
 {
     public class Bank
     {
         private Account[] accountList;
+
+        //Paramiterized Constructor
         public Bank(int size)
         {
             accountList = new Account[size];
@@ -41,7 +82,7 @@ namespace MyLibrary
             {
                 if (accountList[i] == null)
                 { continue; }
-                accountList[i].ShowDetails();                
+                accountList[i].ShowDetails();
             }
         }
     }
@@ -49,14 +90,15 @@ namespace MyLibrary
 
 
 
-
 Account.cs
+
 using System;
 namespace MyLibrary2
 {
 
     public class Account
     {
+        //Structure type Attribute Date
         private struct Date
         {
             private int day;
@@ -70,6 +112,7 @@ namespace MyLibrary2
                 this.year = year;
 
             }
+            //property for day
             public int Day
             {
                 set
@@ -81,6 +124,8 @@ namespace MyLibrary2
                     return this.day;
                 }
             }
+
+            //property for month
             public int Month
             {
                 set
@@ -92,6 +137,7 @@ namespace MyLibrary2
                     return this.month;
                 }
             }
+            //property for year
             public int Year
             {
                 set
@@ -105,9 +151,6 @@ namespace MyLibrary2
             }
 
         }
-
-
-
 
 
         private string accNo;
@@ -130,7 +173,7 @@ namespace MyLibrary2
 
 
 
-        //Property
+        //Property for accessing private attributes
         public string AccNo
         {
             get { return this.accNo; }
@@ -151,7 +194,7 @@ namespace MyLibrary2
             set { this.dob = value; }
         }
 
-        //Deposit
+   
         public bool Deposit(double amount)
         {
             if (amount > 0)
@@ -161,7 +204,7 @@ namespace MyLibrary2
             }
             return false;
         }
-        //Withdraw
+   
         public bool Withdraw(double amount)
         {
             if (amount > 0 && amount <= this.balance)
@@ -171,7 +214,7 @@ namespace MyLibrary2
             }
             return false;
         }
-        //Transfer
+      
         public bool Transfer(Account receiver, double amount)
         {
             if (amount > 0 && amount <= this.balance)
@@ -183,7 +226,7 @@ namespace MyLibrary2
             return false;
         }
 
-        //Calculate Age
+      
         public int CalculateAge()
         {
             int age = DateTime.Now.Year - this.dob.Year;
@@ -191,11 +234,10 @@ namespace MyLibrary2
         }
 
 
-        //Show Details
+        
         public void ShowDetails()
         {
             Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}\nDate of Birth:{3}\nAge:{4}", this.accNo, this.accName, this.balance, this.CalculateAge());
         }
     }
 }
-
