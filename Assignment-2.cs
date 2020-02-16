@@ -42,7 +42,7 @@ Bank.cs
 using System;
 namespace MyLibrary2
 {
-    public class Bank
+    public class Bank          //One to many association.
     {
         private Account[] accountList;
 
@@ -99,7 +99,7 @@ namespace MyLibrary2
     public class Account
     {
         //Structure type Attribute Date
-        private struct Date
+        private struct Date        //one to one association
         {
             private int day;
             private int month;
