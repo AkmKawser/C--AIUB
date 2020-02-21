@@ -70,18 +70,18 @@ namespace MyLibrary2
         }
 
 
-        private string accNo;
+        private string accNo;  //make system generated
         private string accName;
         private double balance;
-        private Date dob;
+        private Date dob; //association. also needs a getter setter as its private
 
-        private static int c = 1;
+        private static int counter = 1;
      
 
         //Parameterized Constructor
         public Account(string accName, double balance, Date dob)
         {
-            this.accNo = "Acc-" + c;
+            this.accNo = "Acc-" + counter;
             c++;
             this.accName = accName;
             this.balance = balance;
