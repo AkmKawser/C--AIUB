@@ -90,8 +90,8 @@ namespace MyLibrary2
 
 
 
-        //Property for accessing private attributes
-        public string AccNo
+        
+        public string AccNo  //as its system generated we dont need any setter function for this.
         {
             get { return this.accNo; }
         }
