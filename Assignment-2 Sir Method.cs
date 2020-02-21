@@ -1,3 +1,92 @@
+Program.cs 
+using MyLibrary2;
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+                   
+             //*******************************ACCOUNT********************************
+            
+			Account a1 = new Account("Kawser",20000.0,new Date(12,12,1998));
+			Account a2= new Account("Tanjimul",30000.0,new Date(2,2,1990));
+            
+            
+            a1.AccName("OOP2 G");
+			//a1.AccNo("11111111");
+			a1.Balance(2000.0);
+            a1.Deposit(20.00);
+            a1.Withdraw(10.00);
+            a1.CalculateAge();
+           
+            //*******************************BANK********************************
+            
+            Bank b1 = new Bank(4);
+			b1.AddAccount(a1);
+			b1.AddAccount(a2);
+			b1.ShowAccounts();
+			b1.DeleteAccount(a1);  //auto generated account pass korbo kibhabe
+			b1.ShowAccounts();
+			b1.DeleteAccount(a2);
+            b1.ShowAccounts();
+        }
+    }
+}
+
+
+Bank.cs
+using System;
+namespace MyLibrary2
+{
+    public class Bank          //One to many association.
+    {
+        private Account[] accountList;
+
+        //Paramiterized Constructor
+        public Bank(int size)
+        {
+            accountList = new Account[size];
+        }
+
+        public void AddAccount(Account obj)
+        {
+            for (int i = 0; i < accountList.Length; i++)
+            {
+                if (accountList[i] == null)
+                {
+                    accountList[i] = obj;
+                    break;
+                }
+            }
+        }
+
+        public void DeleteAccount(string accNo)
+        {
+            for (int i = 0; i < accountList.Length; i++)
+            {
+                if (accountList[i].AccNo == accNo)
+                {
+                    accountList[i] = null;
+                    break;
+                }
+            }
+        }
+
+        public void ShowAccounts()
+        {
+            for (int i = 0; i < accountList.Length; i++)
+            {
+                if (accountList[i] == null)
+                { continue; }
+                accountList[i].ShowDetails();
+            }
+        }
+    }
+}
+
 Account.cs
 
 using System;
