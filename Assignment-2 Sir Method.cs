@@ -73,7 +73,7 @@ namespace MyLibrary2
         private string accNo;  //make system generated
         private string accName;
         private double balance;
-        private Date dob; //association. also needs a getter setter as its private
+        private Date dob; //association.
 
         private static int counter = 1;
      
