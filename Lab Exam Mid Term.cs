@@ -7,7 +7,7 @@ namespace Lab_Final_Library
     public class Teacher
     {
         private string name;
-        private Course[] courseList; //one to many asociation.
+        private Course[] courseList; //one to many asociation. Teacher has many course
 
         public Teacher() { 
         
@@ -135,7 +135,7 @@ namespace Lab_Final_Library
     public class Course
     {
         protected string name;
-        protected Teacher tCher;   //one to one association
+        protected Teacher tCher;   //one to one association. One Course has one Teacher
         protected string[] topics;  
 
         public Course() { 
