@@ -1,5 +1,5 @@
-//Class : Teacher.cs
-//Namespace : Lab_Final_Library
+//Class Name: Teacher.cs
+//Namespace Name: Lab_Final_Library
 
 using System;
 namespace Lab_Final_Library
