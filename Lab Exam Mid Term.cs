@@ -1,3 +1,51 @@
+//Class : Teacher.cs
+//Namespace : Lab_Final_Library
+
+using System;
+namespace Lab_Final_Library
+{
+    public class Teacher
+    {
+        private string name;
+        private Course[] courseList; //one to many asociation.
+
+        public Teacher() { 
+        
+        }
+
+        public Teacher(string name) {
+            this.name = name;
+        }
+
+        public Teacher(string t,params Course[] val) {
+            this.name = t;  
+            this.courseList = val;  
+           
+        }
+
+        public string Name {
+            set { this.name = value; }
+            get { return this.name; }
+        }
+
+        public void Print() { 
+            Console.Write("Teacher: Name="+this.name+"; ");
+            Console.Write(" Courses=[");
+            for (int i = 0; i < courseList.Length; i++)
+            {
+                if (courseList[i] != null)
+                {
+                    Console.Write(""+courseList[i].Name+",");
+                }
+               
+            }
+            Console.Write("]");
+        }
+    }
+}
+
+
+
 //Class Name: OffsideCourse.cs
 //Namespace Name: Lab_Final_Library
 
@@ -35,13 +83,11 @@ namespace Lab_Final_Library
     }
 }
 
+
 //Class Name: CampusCourse.cs
 //Namespace Name: Lab_Final_Library
 
-
 using System;
-
-
 namespace Lab_Final_Library
 {
     public class CampusCourse:Course
@@ -80,7 +126,7 @@ namespace Lab_Final_Library
 }
 
 
-//Class Name: Class1.cs
+//Class Name: Course.cs 
 //Namespace Name: Lab_Final_Library
 
 using System;
@@ -89,8 +135,8 @@ namespace Lab_Final_Library
     public class Course
     {
         protected string name;
-        protected Teacher tCher;
-        protected string[] topics;
+        protected Teacher tCher;   //one to one association
+        protected string[] topics;  
 
         public Course() { 
          this.topics = new string[25];
@@ -130,19 +176,8 @@ namespace Lab_Final_Library
 }
 
 
-/Class Name: Class2.cs
-//Namespace Name: Lab_Final_Library
 
-namespace Lab_Final_Library
-{
-    class Class2
-    {
-    }
-}
-
-
-
-/Class Name: Program.cs
+//Class Name: Program.cs
 //Namespace Name: C_Sharp_lab_Final35381
 
 using System;
