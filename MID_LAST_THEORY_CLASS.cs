@@ -41,7 +41,7 @@ namespace Virtual_Override
              Child2 c2 = new Child2(); 
              c2.MyMethod();
             
-          // Parent p1 = new Child();   //etaki upcasting/downcasting? Parent er 
+          // Parent p1 = new Child();   //etaki upcasting/downcasting? Parent class e child er reference rekhechi. 
            //p1.MyMethod();
             
 
