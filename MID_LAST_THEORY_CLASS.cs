@@ -11,7 +11,7 @@ namespace Virtual_Override
             Console.WriteLine("Parent -> My Method");
         }
     }
-    public class Child:Parent     //2nd genaration
+    public class Child:Parent     //SecondGenaration
     {
         override public void MyMethod()  //It Works as virtual for child2
         //sealed public void MyMethod()  //Stops override permission for child2 (next generation). ar class er age sealed use korle class er inheritance bondho kore dei.
@@ -21,7 +21,7 @@ namespace Virtual_Override
     }
     public class Child2:Child  // ThirdGenaration
     {
-        new public void MyMethod()   //This is "Method Hiding". "new" er kaj holo parent er method ke hide kore child e notunvabe declare kora. 
+        new public void MyMethod()   //This is "Method Hiding". "new" er kaj holo parent er MyMethod() ke hide kore child e notunvabe declare kora. 
         {
             Console.WriteLine("Child2 -> My Method");
         }
@@ -35,10 +35,10 @@ namespace Virtual_Override
 
            // Child c = new Child();
            // c.MyMethod();
-             Child2 c2 = new Child2();
+             Child2 c2 = new Child2(); 
              c2.MyMethod();
             
-          // Parent p1 = new Child();  
+          // Parent p1 = new Child();   //etaki upcasting/downcasting? Parent er 
            //p1.MyMethod();
             
 
