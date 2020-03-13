@@ -3,12 +3,12 @@ using System;
 
 namespace ClassLibrary1
 {
-        public class Account
+       abstract public class Account
     {
     
-        protected string accNo;
-        protected string accName;
-        protected double balance;
+        private string accNo;
+        private string accName;
+        private double balance;
 
         private static int counter = 1;
 
