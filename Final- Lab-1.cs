@@ -3,9 +3,9 @@ using System;
 
 namespace ClassLibrary1
 {
-       abstract public class Account
+    abstract public class Account
     {
-    
+
         private string accNo;
         private string accName;
         private double balance;
@@ -23,9 +23,25 @@ namespace ClassLibrary1
             counter++;
             this.accName = accName;
             this.balance = balance;
-           
+
         }
-   
+
+        //Property for accessing private attributes
+        public string AccNo
+        {
+            get { return this.accNo; }
+        }
+        public string AccName
+        {
+            get { return this.accName; }
+            set { this.accName = value; }
+        }
+        public double Balance
+        {
+            get { return this.balance; }
+            set { this.balance = value; }
+        }
+
         public bool Deposit(double amount)
         {
             if (amount > 0)
@@ -35,7 +51,7 @@ namespace ClassLibrary1
             }
             return false;
         }
-   
+
         public bool Withdraw(double amount)
         {
             if (amount > 0 && amount <= this.balance)
@@ -45,14 +61,14 @@ namespace ClassLibrary1
             }
             return false;
         }
-      
+
 
         public double CurrentBalance()
         {
             return balance;
         }
 
-        
+
         public void ShowDetails()
         {
             Console.WriteLine("Account No:{0}\nAccount Name:{1}\nBalance:{2}", this.accNo, this.accName, this.balance);
