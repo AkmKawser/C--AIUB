@@ -25,24 +25,6 @@ namespace ClassLibrary1
             this.balance = balance;
            
         }
-
-
-
-        //Property for accessing private attributes
-        public string AccNo
-        {
-            get { return this.accNo; }
-        }
-        public string AccName
-        {
-            get { return this.accName; }
-            set { this.accName = value; }
-        }
-        public double Balance
-        {
-            get { return this.balance; }
-            set { this.balance = value; }
-        }
    
         public bool Deposit(double amount)
         {
