@@ -81,41 +81,40 @@ namespace ClassLibrary1
 savingaccount.cs
 using System;
 
-
 namespace ClassLibrary1
 {
-    public class SavingAccount:Account 
+	public class SavingAccount : Account
 
-    {
-        private double interest;
-        private double rate;
-        private double time;
+	{
+		private double interestRate;
 
-        public SavingAccount()
-        {
-            
-        }
+		public double InterestRate
+		{
+			set {
+				if (balance > 10000)
+				{
+					interestRate = balance * .06;
+				}
+				else
+					interestRate = balance * .03;
+				    this.interestRate = value;
+			    
+			    }
+			get { return this.interestRate; }
+		}
 
-       
 
-        public void interestRate()
-        {
+		public void showDetails()  //account class e attribute gulake protected na korle ei class theke access kora jetona.
+		{
 
-            if (balance > 10000)
-            {
-                rate = balance * .06;
-            }
-            else
-                rate = balance * .03;
-
-            interest = balance * rate * time / 100;
-            time = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Simple Interest is :{0}", interest);
-           
-        }
-
-    }
+			Console.WriteLine("Account Number: " + accNo);
+			Console.WriteLine("Account Name: " + accName);
+			Console.WriteLine("Balance: " + balance);
+			Console.WriteLine("Interest Rate: " + interestRate);
+		}
+	}
 }
+
 
 checkignaccount.cs
 using System;
