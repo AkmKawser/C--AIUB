@@ -1,0 +1,2 @@
+ctor লিখার পর ২ বার tab দিলে new class তৈরি হয়। 
+cw লিখার পর ২ বার tab দিলে Console.WriteLine() আসে। 
