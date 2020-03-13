@@ -10,7 +10,7 @@ namespace ClassLibrary1
         private string accName;
         private double balance;
 
-        private static int counter = 1;
+        private static int counter = 0;
 
         public Account()
         {
