@@ -142,7 +142,7 @@ namespace Lab_Final_Library
          this.topics = new string[25];
         }
 
-        public Course(string cName,Teacher t){
+        public Course(string cName,Teacher t){  //Inheritance achieve korte chaile parent class er sob constructor+property MUST PUBLIC hote hobe
             this.name=cName;
             this.tCher=t;
         
