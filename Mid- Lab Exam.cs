@@ -134,7 +134,7 @@ namespace Lab_Final_Library
 {
     public class Course
     {
-        protected string name;
+        protected string name;  // zehetu parent class tai Encapsulation achieve korar jonno parent class er member gulo protected korechi.
         protected Teacher tCher;   //one to one association. One Course has one Teacher
         protected string[] topics;  
 
