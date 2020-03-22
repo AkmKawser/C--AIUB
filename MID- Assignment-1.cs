@@ -1,5 +1,5 @@
 /*PROGRAM-1:*/
-
+//Application : Data Type.
 using System;
 namespace ConsoleApplication
 {
