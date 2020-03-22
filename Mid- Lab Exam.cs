@@ -10,7 +10,7 @@ namespace Lab_Final_Library
     public class Teacher  //C# e class er age must public keyword dite hobe. Otherwise by default eta internal hisebe kaj kore.
     {
         private string name;
-        private Course[] courseList; //one to many asociation. Teacher has many course
+        private Course[] courseList; //one to many asociation. Teacher has many course.Association bujhar easy way holo er TYPE always ekta class hobe
 
         public Teacher() { 
         
