@@ -1,4 +1,4 @@
-//APPLICATION : Inheritance + Association
+//APPLICATION : Inheritance + Association + Abstraction [Object of a Course class cannot be created] +Encapsulation
 
 
 //Class Name: Teacher.cs
